@@ -4,7 +4,7 @@ export default function ErrorPage() {
   return (
     <main className="main error-page flex">
       <h1>Oh no, this route doesn't exist!</h1>
-      <Link to="/blog-client">
+      <Link to="/">
         You can go back to the home page by clicking here, though!
       </Link>
     </main>
