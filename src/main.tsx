@@ -6,13 +6,24 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import App from './App';
 import ErrorPage from './routes/ErrorPage';
 import './index.css';
+import Posts from './routes/Posts';
+import Post from './components/Post';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
-    children: [],
+    children: [
+      {
+        path: '/',
+        element: <Posts />,
+      },
+      {
+        path: '/posts/:postId',
+        element: <Post />,
+      },
+    ],
   },
 ]);
 
